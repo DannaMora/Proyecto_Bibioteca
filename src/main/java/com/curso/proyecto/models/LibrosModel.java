@@ -11,7 +11,7 @@ public class LibrosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "isbn")
-    private String isbn;
+    private Long isbn;
 
     @Column(name = "titulo")
     private String titulo;
