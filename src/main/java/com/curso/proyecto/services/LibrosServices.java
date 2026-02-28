@@ -13,8 +13,8 @@ public class LibrosServices {
     @Autowired
     public LibrosRepository libroRepo;
 
-    public Integer createLibro(LibrosModel libro) {
-        Integer newIsbn = -1;
+    public Long createLibro(LibrosModel libro) {
+        Long newIsbn = -1L;
 
         try {
             LibrosModel lib = libroRepo.save(libro);
@@ -22,7 +22,7 @@ public class LibrosServices {
         }
 
         catch (Exception e) {
-            newIsbn = -2;
+            newIsbn = -2L;
         }
 
         return newIsbn;
